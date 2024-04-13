@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "testeilco2024": {
+      "hosting": {
+        "webservices2024": [
+          "testeilco2024"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "testeilco2024"
+  }
+}
