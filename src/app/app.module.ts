@@ -15,6 +15,10 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { HttpClientModule } from '@angular/common/http';
 //importer les component PrimeNG
 import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
+import { RatingModule } from 'primeng/rating';
+
+
 
 @NgModule({
   declarations: [
@@ -43,6 +47,8 @@ import { ButtonModule } from 'primeng/button';
     HttpClientModule,
     // Déclarer primeng Component
     ButtonModule,
+    TableModule,
+    RatingModule,
   ],
   providers: [],
   bootstrap: [AppComponent] // Déclarer AppComponent à amorcer

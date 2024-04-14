@@ -1,0 +1,27 @@
+@import "primeicons/primeicons.css";
+
+.resultats{
+    border-radius: 16%;
+    background-color: #EBE9F3;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 11px;
+    padding-right: 11px;
+    color: #5742A9;
+    font-weight: 700;
+}
+.name{
+    font-weight: bold;
+    color: black;
+}
+.match_end{
+    background-color: #FBE3E3;
+    color: #FA2929;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+.pi{
+    padding-right: 7px;
+}

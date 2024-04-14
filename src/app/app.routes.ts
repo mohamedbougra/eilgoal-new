@@ -6,6 +6,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { AuthGuard, redirectUnauthorizedTo} from '@angular/fire/auth-guard';
+import { MatchTableComponent } from './components/match-table/match-table.component';
+import { TableComponent } from './components/match-table/table/table.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['sign-in']);
 
@@ -16,6 +18,7 @@ export const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
+  {path:'matchs',component:TableComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
