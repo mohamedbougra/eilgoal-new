@@ -1,4 +1,9 @@
-.resultats{
-    border-radius: 30px;
-    background-color: rgba(0, 0, 255, 0.454);
+.FT{
+    color: #FA2929;
+}
+.NS{
+    color: blueviolet;
+}
+.LV{
+    color: aquamarine;
 }

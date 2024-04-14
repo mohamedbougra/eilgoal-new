@@ -5,5 +5,6 @@ export interface Match{
     goal_1:string;
     goal_2:string;
     status:string;
+    date:string;
 
 }

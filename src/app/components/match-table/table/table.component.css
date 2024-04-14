@@ -16,7 +16,6 @@
 }
 .match_end{
     background-color: #FBE3E3;
-    color: #FA2929;
     padding-top: 6px;
     padding-bottom: 6px;
     padding-left: 11px;
@@ -24,4 +23,14 @@
 }
 .pi{
     padding-right: 7px;
+}
+
+.LT{
+    color: #FA2929;
+}
+.CM{
+    color: blueviolet;
+}
+.LV{
+    color: green;
 }

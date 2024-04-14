@@ -18,7 +18,7 @@ export const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
-  {path:'matchs',component:TableComponent},
+  {path:'matchs',component:MatchTableComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

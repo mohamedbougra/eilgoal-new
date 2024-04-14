@@ -1,22 +1,23 @@
-<p-table [value]="products" [tableStyle]="{'min-width': '50rem'}" styleClass="p-datatable-striped">
-    <ng-template pTemplate="body" let-product let-columns="columns">
-        <tr>
+<p-table [value]="(choose_match())" [tableStyle]="{'min-width': '50rem'}" styleClass="p-datatable-striped">
+    <ng-template pTemplate="body" let-match>
+
+        <tr >
             <td class="name">
-                <img src="https://media.api-sports.io/football/teams/15938.png" [class]="'flag'" style="width: 20px" />
-                {{product.name}}
+                <img src="{{match.team1.logo}}" [class]="'flag'" style="width: 20px" />
+                {{match.team1.name}}
             </td>
             <td>
-                <span class="resultats">1 - 2</span>
+                <span class="resultats">{{match.goal_1}} - {{match.goal_2}}</span>
             </td>
             <td>
-                {{product.name}}
-                <img src="https://media.api-sports.io/football/teams/15938.png" [class]="'flag'" style="width: 20px" />
+                {{match.team2.name}}
+                <img src="{{match.team2.logo}}" [class]="'flag'" style="width: 20px" />
             </td>
             <td>
-                <span class="match_end resultats">Full-Time</span>
+                <span class="match_end resultats {{color_stat}}">{{match.status}}</span>
             </td>
             <td>
-                13 April 2024
+                {{match.date}}
             </td>
             <td>
                 <span class="pi pi-info-circle"></span>

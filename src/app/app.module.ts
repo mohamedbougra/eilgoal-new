@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { RatingModule } from 'primeng/rating';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -31,6 +32,7 @@ import { RatingModule } from 'primeng/rating';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutes,
     provideFirebaseApp(() => initializeApp({
       projectId: 'testeilco2024',
