@@ -18,12 +18,18 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { RatingModule } from 'primeng/rating';
 import { CommonModule } from '@angular/common';
+import { NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { Table } from 'primeng/table';
+
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    
     DashboardComponent,
     SignInComponent,
     SignUpComponent,
@@ -33,6 +39,8 @@ import { CommonModule } from '@angular/common';
   imports: [
     BrowserModule,
     CommonModule,
+    
+    FormsModule,
     AppRoutes,
     provideFirebaseApp(() => initializeApp({
       projectId: 'testeilco2024',
@@ -50,7 +58,6 @@ import { CommonModule } from '@angular/common';
     // Déclarer primeng Component
     ButtonModule,
     TableModule,
-    RatingModule,
   ],
   providers: [],
   bootstrap: [AppComponent] // Déclarer AppComponent à amorcer
