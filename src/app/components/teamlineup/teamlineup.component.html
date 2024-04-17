@@ -2,7 +2,7 @@
 <p-divider layout="vertical"></p-divider>
 <p>
     <li *ngFor="let player of matchDetailsForLineup.response[0].lineups[0].startXI">
-      {{ player.player.name }}
+      {{player.player.pos}} {{ player.player.name }}
     </li>
 </p>
 
@@ -10,6 +10,6 @@
 
 <p>
     <li *ngFor="let player of matchDetailsForLineup.response[0].lineups[1].startXI">
-      {{ player.player.name }}
+      {{player.player.pos}} {{ player.player.name }}
     </li>
 </p>

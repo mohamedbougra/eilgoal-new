@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MatchDetailsService {
   private headers = new HttpHeaders({
-    'x-apisports-key': '546446bc637f5e656e8e2742edebb2ed',
+    'x-apisports-key': '3183a9decc82768ea00b9b2bb012a2c5',
     'X-RapidAPI-Host': 'v3.football.api-sports.io',
   });
   public baseurl = 'https://v3.football.api-sports.io/';
