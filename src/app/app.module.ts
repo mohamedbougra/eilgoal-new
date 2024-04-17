@@ -20,8 +20,8 @@ import { MatchDetailsComponent } from './components/match-details/match-details.
 import { ChipModule } from 'primeng/chip';
 import { TagModule } from 'primeng/tag';
 import { ProgressBar, ProgressBarModule } from 'primeng/progressbar';
-
-
+import { Divider, DividerModule } from 'primeng/divider';
+import { TeamlineupComponent } from './components/teamlineup/teamlineup.component';
 
 
 @NgModule({
@@ -33,6 +33,7 @@ import { ProgressBar, ProgressBarModule } from 'primeng/progressbar';
     ForgotPasswordComponent,
     VerifyEmailComponent,
     MatchDetailsComponent,
+    TeamlineupComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +57,7 @@ import { ProgressBar, ProgressBarModule } from 'primeng/progressbar';
     ChipModule,
     TagModule,
     ProgressBarModule,
+    DividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent] // Déclarer AppComponent à amorcer
