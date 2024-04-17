@@ -23,4 +23,7 @@ export class DashboardComponent implements OnInit {
       console.error(error);
     });
   }
+  public Switch(){
+    
+  }
 }

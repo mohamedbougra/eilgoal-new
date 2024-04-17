@@ -36,7 +36,7 @@ export class AuthService {
     return signInWithEmailAndPassword(this.auth, email, password)
       .then((userCredential) => {
         if (userCredential.user) {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['match-details']);
         }
       })
       .catch((error) => {

@@ -15,6 +15,14 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { HttpClientModule } from '@angular/common/http';
 //importer les component PrimeNG
 import { ButtonModule } from 'primeng/button';
+import { AvatarModule } from 'primeng/avatar';
+import { MatchDetailsComponent } from './components/match-details/match-details.component';
+import { ChipModule } from 'primeng/chip';
+import { TagModule } from 'primeng/tag';
+import { ProgressBar, ProgressBarModule } from 'primeng/progressbar';
+
+
+
 
 @NgModule({
   declarations: [
@@ -24,6 +32,7 @@ import { ButtonModule } from 'primeng/button';
     SignUpComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
+    MatchDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +52,10 @@ import { ButtonModule } from 'primeng/button';
     HttpClientModule,
     // Déclarer primeng Component
     ButtonModule,
+    AvatarModule,
+    ChipModule,
+    TagModule,
+    ProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent] // Déclarer AppComponent à amorcer

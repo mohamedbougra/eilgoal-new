@@ -1,0 +1,35 @@
+<div class="card grid">
+  <div class="col-12 xl:col-12 centrer">
+    <h5>{{ matchDetails.response[0].fixture.venue.name }}</h5>
+  </div>
+  <div class="col-12 xl:col-4 centrer">
+    <h6>{{ matchDetails.response[0].teams.home.name }}</h6>
+    <p-avatar
+      image="{{ matchDetails.response[0].teams.home.logo }}"
+      styleClass="m-1"
+      size="xlarge"
+      shape="circle"
+    ></p-avatar>
+  </div>
+  <div class="col-12 xl:col-4 centrer vertical-center">
+    <div>
+      <p-chip styleClass="m-3 pl-2 pr-2">
+        <span class="m-2 font-medium text-blue-500">{{matchDetails.response[0].goals.home}}</span>
+        <span class="m-2 font-medium text-blue-500">-</span>
+        <span class="m-2 font-medium text-blue-500">{{matchDetails.response[0].goals.away}}</span>
+      </p-chip>
+    </div>
+    <div>
+      <p-tag severity="success" value="full-match" [rounded]="true"></p-tag>
+    </div>
+  </div>
+  <div class="col-12 xl:col-4 centrer">
+    <h6>{{ matchDetails.response[0].teams.away.name }}</h6>
+    <p-avatar
+      image="{{ matchDetails.response[0].teams.away.logo }}"
+      styleClass="m-1"
+      size="xlarge"
+      shape="circle"
+    ></p-avatar>
+  </div>
+</div>
