@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "EILGOAL3": {
+    "eil-goal-new": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -34,13 +34,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "10kb",
+                  "maximumError": "15kb"
                 }
               ],
               "outputHashing": "all"
@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "EILGOAL3:build:production"
+              "buildTarget": "eil-goal-new:build:production"
             },
             "development": {
-              "buildTarget": "EILGOAL3:build:development"
+              "buildTarget": "eil-goal-new:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "EILGOAL3:build"
+            "buildTarget": "eil-goal-new:build"
           }
         },
         "test": {
@@ -92,9 +92,19 @@
         "deploy": {
           "builder": "@angular/fire:deploy",
           "options": {
-            "version": 2,
-            "browserTarget": "webservices2024:build:production"
-          }
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "eil-goal-new:build:production",
+              "serveTarget": "eil-goal-new:serve:production"
+            },
+            "development": {
+              "buildTarget": "eil-goal-new:build:development",
+              "serveTarget": "eil-goal-new:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

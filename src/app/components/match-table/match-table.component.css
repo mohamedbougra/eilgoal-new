@@ -10,3 +10,11 @@
     color: rgb(75, 213, 167);
     background-color: rgb(176, 250, 225);
 }
+img.flag1 {
+    width: 30px;
+}
+
+.flag1 {
+    background-size: 100%;
+    vertical-align: middle;
+}

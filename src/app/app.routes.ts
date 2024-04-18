@@ -15,10 +15,14 @@ import { MatchTableComponent } from './components/match-table/match-table.compon
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['sign-in']);
 
 export const routes: Routes = [
+  { path: '', component: SignInComponent },
+
   {
+    
     path: '',
     component: AppLayoutComponent,
     children: [
+
       {
         path: 'dashboard',
         component: DashboardComponent,

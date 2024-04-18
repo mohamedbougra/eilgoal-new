@@ -34,3 +34,11 @@
 .LV{
     color: green;
 }
+img.flag1 {
+    width: 30px;
+}
+
+.flag1 {
+    background-size: 100%;
+    vertical-align: middle;
+}

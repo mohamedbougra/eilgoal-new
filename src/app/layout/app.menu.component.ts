@@ -25,7 +25,6 @@ export class AppMenuComponent implements OnInit {
       }
     ngOnInit() {
         this.getPkm(39);
-        console.log( this.getPkm(39))
         this.model = [
             {
                 label: 'Menu',
@@ -43,7 +42,7 @@ export class AppMenuComponent implements OnInit {
                     { label: 'Premier League', icon: 'pi pi-fw pi-globe', routerLink:  ['/league',39] },
                     { label: 'La Liga', icon: 'pi pi-fw pi-globe', routerLink:  ['/league',140] },
                     { label: 'Ligue 1', icon: 'pi pi-fw pi-globe', routerLink:  ['/league',61] },
-                    { label: 'Serie A', icon: 'pi pi-fw pi-globe', routerLink:  ['/league',71] },
+                    { label: 'Serie A', icon: 'pi pi-fw pi-globe', routerLink:  ['/league',135] },
                     { label: 'Bundesliga', icon: 'pi pi-fw pi-globe', routerLink:  ['/league',78] },
                     ]
             },
@@ -60,9 +59,9 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Favorite club',
                 items: [
-                    { label: 'Chelsea FC', icon: 'pi pi-fw pi-eye', routerLink: ['/blocks'], badge: 'NEW' },
-                    { label: 'Bayern Munchen', icon: 'pi pi-fw pi-eye', routerLink: ['/blocks'], badge: 'NEW' },
-                    { label: 'Manchester City', icon: 'pi pi-fw pi-eye', url: ['https://www.primefaces.org/primeblocks-ng'], target: '_blank' },
+                    { label: 'Bayern Munchen', icon: 'pi pi-fw pi-eye', url: ['https://fr.wikipedia.org/wiki/Bayern_Munich'], target: '_blank' },
+                    { label: 'Chelsea FC', icon: 'pi pi-fw pi-eye', url: ['https://fr.wikipedia.org/wiki/Chelsea_Football_Club'], target: '_blank' },
+                    { label: 'Manchester City', icon: 'pi pi-fw pi-eye', url: ['https://fr.wikipedia.org/wiki/Manchester_City_Football_Club'], target: '_blank' },
                 ]
             }
         ];

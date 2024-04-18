@@ -1,22 +1,19 @@
-<div class="formGroup" *ngIf="authService.userData as user">
+<div class="surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden" *ngIf="authService.userData as user">
+  <main class="">
+    <div class="text-center">
+      <h3 class="text-blue-400"> We have sent a confirmation email to </h3>
+      <h5 class="text-gray-900"> {{ user.email }}</h5>
+      <p class="mt-6 text-base leading-7 text-gray-600">Please check your email and click on the link to verfiy your
+        email address. .</p>
+      <div class="">
+        <button pButton pRipple
+        (click)="authService.sendVerificationMail()"
+      label="Resend Verification Email" class="p-2 text-xl">  <i class="fas fa-redo-alt"></i>    </button>
+    <br>
+    <br> <button pButton pRipple class="p-2 text-xl border-gray-900 bg-gray-100 text-gray-900" label="dashboard"
+      routerLink="/dashboard"></button>
 
-  <main class="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
-  <div class="text-center">
-    <p class="text-base font-semibold text-indigo-600"> We have sent a confirmation email to</p>
-    <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl"> {{ user.email }}</h1>
-    <p class="mt-6 text-base leading-7 text-gray-600">Please check your email and click on the link to verfiy your email address.      .</p>
-    <div class="mt-10 flex items-center justify-center gap-x-6">
-      <button
-  type="button"
-  class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-  (click)="authService.sendVerificationMail()"
->
-  <i class="fas fa-redo-alt"></i>
-  Resend Verification Email
-</button>
-      <a routerLink="/dashboard" class="text-sm font-semibold text-gray-900">Home <span aria-hidden="true">&rarr;</span></a>
-      
+      </div>
     </div>
-  </div>
-</main>
+  </main>
 </div>

@@ -1,14 +1,14 @@
 {
   "targets": {
-    "testeilco2024": {
+    "eil-goal-new": {
       "hosting": {
-        "webservices2024": [
-          "testeilco2024"
+        "eil-goal-new": [
+          "eil-goal-new"
         ]
       }
     }
   },
   "projects": {
-    "default": "testeilco2024"
+    "default": "eil-goal-new"
   }
 }

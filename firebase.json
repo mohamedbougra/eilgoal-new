@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "target": "webservices2024",
+      "target": "eil-goal-new",
       "source": ".",
       "frameworksBackend": {}
     }

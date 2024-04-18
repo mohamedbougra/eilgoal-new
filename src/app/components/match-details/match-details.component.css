@@ -34,3 +34,11 @@ order: 0;
 flex-grow: 0;
 
   }
+  img.flag1 {
+    width: 30px;
+}
+
+.flag1 {
+    background-size: 100%;
+    vertical-align: middle;
+}
