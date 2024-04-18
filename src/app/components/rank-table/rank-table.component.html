@@ -1,6 +1,6 @@
 
 <div class="card flex justify-content-center">
-    <p-dropdown [options]="groupedCities" [(ngModel)]="selectedCity" placeholder="Select a City" [group]="true">
+    <p-dropdown [options]="groupedCities" [(ngModel)]="selectedCity" placeholder="Select a City" (click)="getRanks()" [group]="true">
         <ng-template let-group pTemplate="group">
             <div class="flex align-items-center">
                 <img src="{{group.image}}" [class]="'mr-2 flag flag-' + group.value" style="width: 20px" />
@@ -8,4 +8,41 @@
             </div>
         </ng-template>
     </p-dropdown>
-</div>
+
+    <div class="card">
+        <p-table [value]="ranks" [tableStyle]="{'min-width': '50rem'}">
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th>Classement</th>
+                    <th>Club </th>
+                    <th>W</th>
+                    <th>D</th>
+                    <th>L</th>
+                    <th>Poin</th>
+                    <th>Latests</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rank let-columns="columns">
+                <tr class="a{{rank.class}}">
+                    <td class="classement">{{rank.class}}</td>
+                    <td>
+                        <img src="{{rank.club.logo}}" [class]="'flag'" style="width: 20px" />
+                        {{rank.club.name}}
+                    </td>
+                    <td>{{rank.W}}</td>
+                    <td>{{rank.D}}</td>
+                    <td>{{rank.L}}</td>
+                    <td>{{rank.poin}}</td>
+                <!--  <td><p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag></td>--> 
+                    <td>
+                        <img src="{{rank.lasts[0]}}" [class]="'flag'" style="width: 20px; margin-right:3px" />
+                        <img src="{{rank.lasts[1]}}" [class]="'flag'" style="width: 20px; margin-right:3px;" />
+                        <img src="{{rank.lasts[2]}}" [class]="'flag'" style="width: 20px; margin-right:3px;" />
+                        <img src="{{rank.lasts[3]}}" [class]="'flag'" style="width: 20px; margin-right:3px;" />
+                        <img src="{{rank.lasts[4]}}" [class]="'flag'" style="width: 20px; margin-right:3px;" />
+    
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div></div>

@@ -7,5 +7,5 @@ export interface Rank {
     D:string;
     L:string;
     poin:string;
-    reviews:string;
+    lasts:string[];
 }

@@ -21,7 +21,7 @@ export const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
   {path:'matchs',component:MatchTableComponent},
-  {path:'rank',component:CtableComponent},
+  {path:'rank',component:RankTableComponent},
 
 ];
 @NgModule({

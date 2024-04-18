@@ -11,7 +11,7 @@ export class MatchsServiceService {
 
   private headers = new HttpHeaders({
     'x-rapidapi-host': 'v3.football.api-sports.io',
-    'x-rapidapi-key': '9510d4263e33d16ebf91e6edade56b12', // clé d'API
+    'x-rapidapi-key': 'd2b1c04d91cd059f85a7eb9391c7fcd3', // clé d'API
   });
   constructor(private http: HttpClient) { }
   lastmatchs(): Observable<any> {

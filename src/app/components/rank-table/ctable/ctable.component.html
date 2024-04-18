@@ -1,8 +1,9 @@
 
 <div class="card">
-    <p-table [value]="products" [tableStyle]="{'min-width': '50rem'}">
+    <p-table [value]="ranks" [tableStyle]="{'min-width': '50rem'}">
         <ng-template pTemplate="header" let-columns>
             <tr>
+                <th>Classement</th>
                 <th>Club </th>
                 <th>W</th>
                 <th>D</th>
@@ -11,14 +12,26 @@
                 <th>Reviews</th>
             </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-product let-columns="columns">
+        <ng-template pTemplate="body" let-rank let-columns="columns">
             <tr>
-                <td>{{product.name}}</td>
-                <td>{{product.price}}</td>
-                <td>{{product.category}}</td>
-                <td>{{product.quantity}}</td>
-                <td><p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag></td>
-                <td><p-rating  [readonly]="true" [cancel]="false"></p-rating></td>
+                <td class="classement">{{rank.class}}</td>
+                <td>
+                    <img src="{{rank.club.logo}}" [class]="'flag'" style="width: 20px" />
+                    {{rank.club.name}}
+                </td>
+                <td>{{rank.W}}</td>
+                <td>{{rank.D}}</td>
+                <td>{{rank.L}}</td>
+                <td>{{rank.poin}}</td>
+            <!--  <td><p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag></td>--> 
+                <td>
+                    <img src="{{rank.lasts[0]}}" [class]="'flag'" style="width: 20px; margin-right:3px" />
+                    <img src="{{rank.lasts[1]}}" [class]="'flag'" style="width: 20px; margin-right:3px;" />
+                    <img src="{{rank.lasts[2]}}" [class]="'flag'" style="width: 20px; margin-right:3px;" />
+                    <img src="{{rank.lasts[3]}}" [class]="'flag'" style="width: 20px; margin-right:3px;" />
+                    <img src="{{rank.lasts[4]}}" [class]="'flag'" style="width: 20px; margin-right:3px;" />
+
+                </td>
             </tr>
         </ng-template>
     </p-table>
