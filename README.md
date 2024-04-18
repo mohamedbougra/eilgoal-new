@@ -2,8 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
-Eil-GOAl est une application web développée en utilisant Angular et Firebase. Elle permet aux utilisateurs de définir et de suivre leurs objectifs personnels et professionnels, ainsi que de suivre leur progression vers ces objectifs.
-
+Eil-GOAl est une application web développée en utilisant Angular et Firebase.
 
 Veuillez noter que ces liens sont désormais obsolètes. Le projet a été migré vers de nouveaux dépôts GitHub et de nouveaux déploiements Firebase. Les liens actuels peuvent être trouvés ci-dessous.
 
