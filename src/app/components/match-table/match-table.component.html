@@ -1,0 +1,5 @@
+
+<div class="card">
+    <p-tabMenu [scrollable]="true" [model]="items" [activeItem]="activeItem" (activeItemChange)="onActiveItemChange($event)"></p-tabMenu>
+    <app-table [which_match]="activeItem?.label"></app-table>
+</div>

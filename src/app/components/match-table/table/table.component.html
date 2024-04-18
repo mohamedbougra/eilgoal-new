@@ -1,0 +1,28 @@
+<p-table [value]="(choose_match())" [tableStyle]="{'min-width': '50rem'}" styleClass="p-datatable-striped">
+    <ng-template pTemplate="body" let-match>
+
+        <tr >
+            <td class="name">
+                <img src="{{match.team1.logo}}" [class]="'flag'" style="width: 20px" />
+                {{match.team1.name}}
+            </td>
+            <td>
+                <span class="resultats">{{match.goal_1}} - {{match.goal_2}}</span>
+            </td>
+            <td>
+                <img src="{{match.team2.logo}}" [class]="'flag'" style="width: 20px" />
+                {{match.team2.name}}
+
+            </td>
+            <td>
+                <span class="match_end resultats {{color_stat}}">{{match.status}}</span>
+            </td>
+            <td>
+                {{match.date}}
+            </td>
+            <td>
+                <a [routerLink]="['/match', match.ids]" class="pi pi-eye"></a>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

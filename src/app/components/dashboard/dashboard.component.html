@@ -1,0 +1,152 @@
+<!-- <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8" *ngIf="authService.userData as user">
+  <div class="px-4 sm:px-0">
+    <h3 class="text-base font-semibold leading-7 text-gray-900">Applicant Information</h3>
+    <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personal details and application.</p>
+  </div>
+  <div class="mt-6 border-t border-gray-100">
+    <dl class="divide-y divide-gray-100">
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm font-medium leading-6 text-gray-900">first name</dt>
+        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ user.firstName }}</dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm font-medium leading-6 text-gray-900">last name</dt>
+        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ user.lastName }}</dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm font-medium leading-6 text-gray-900">Email address</dt>
+        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ user.email }}</dd>
+      </div>
+    </dl>
+<div>
+    <input
+    type="button"
+    (click)="authService.signOut()"
+    value="déconnecter"
+    class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+  />
+</div>
+<br>
+<button
+class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+(click)="getPkm()">Afficher le contenu du fichier</button>
+
+    </div>
+  </div>
+  <div class="card flex justify-content-center">
+    <p-button label="Check" icon="pi pi-check"></p-button>
+</div> -->
+<div class="grid">
+  <div class="col-12 xl:col-12 ">
+    <div class="card grid">
+      <div class="col-12 xl:col-12 centrer">
+        <h5>{{ matchDetails.response[0].fixture.venue.name }}</h5>
+      </div>
+      <div class="col-12 xl:col-4 centrer">
+        <h6>{{ matchDetails.response[0].teams.home.name }}</h6>
+        <p-avatar
+          image="{{ matchDetails.response[0].teams.home.logo }}"
+          styleClass="m-1"
+          size="xlarge"
+          shape="circle"
+        ></p-avatar>
+      </div>
+      <div class="col-12 xl:col-4 centrer vertical-center">
+        <div>
+          <p-chip styleClass="m-3 pl-2 pr-2">
+            <span class="m-2 font-medium text-blue-500">{{matchDetails.response[0].goals.home}}</span>
+            <span class="m-2 font-medium text-blue-500">-</span>
+            <span class="m-2 font-medium text-blue-500">{{matchDetails.response[0].goals.away}}</span>
+          </p-chip>
+        </div>
+        <div>
+          <p-tag severity="success" value="full-match" [rounded]="true"></p-tag>
+        </div>
+      </div>
+      <div class="col-12 xl:col-4 centrer">
+        <h6>{{ matchDetails.response[0].teams.away.name }}</h6>
+        <p-avatar
+          image="{{ matchDetails.response[0].teams.away.logo }}"
+          styleClass="m-1"
+          size="xlarge"
+          shape="circle"
+        ></p-avatar>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 xl:col-12">
+  </div>
+  <div class="col-12 xl:col-12">
+    <div class="card">
+      <h5>Matchs</h5>
+      <app-match-table></app-match-table>
+      
+    </div>
+  </div>
+  <div class="col-12 xl:col-12">
+    <div class="card">
+      <h5>Standings</h5>
+      <app-rank-table></app-rank-table>
+      
+    </div>
+  </div>
+  <div class="col-12 xl:col-12">
+    <div class="card">
+      <img src="../../../assets/layout/images/download.svg" alt="download image">
+    </div>
+  </div>
+
+  <div class="col-12 xl:col-12">
+    <div class="card">
+      <h5>Injuries News</h5>
+      <p-tabView styleClass="tabview-custom">
+        <p-tabPanel>
+          <ng-template pTemplate="header">
+            <i class="text-purple-700 pi pi-align-center"></i>
+            <span class=" ml-1 text-purple-700">Injuries</span>
+          </ng-template>
+          <div class="grid flex justify-content-center">
+              
+            <p-card class="col-6 xl:col-3 " >
+                <ng-template pTemplate="header">
+                    <img class="image-card-news" alt="Card" src={{injuriesCard.response[0].player.photo}} style="size: 50px;"/>
+                </ng-template>
+                <h6 class="text-purple-400">{{injuriesCard.response[0].player.name}}</h6>
+                <h6 class="truncate-2-lines">{{injuriesCard.response[0].player.reason}}</h6>
+      
+            </p-card>
+  
+            <p-card class="col-6 xl:col-3 " >
+              <ng-template pTemplate="header">
+                  <img class="image-card-news" alt="Card" src={{injuriesCard.response[1].player.photo}}/>
+              </ng-template>
+              <h6 class="text-purple-400">{{injuriesCard.response[1].player.name}}</h6>
+              <h6 class="truncate-2-lines">{{injuriesCard.response[1].player.reason}}</h6>
+      
+          </p-card>
+  
+          <p-card class="col-6 xl:col-3 " >
+              <ng-template pTemplate="header">
+                  <img class="image-card-news" alt="Card" src={{injuriesCard.response[2].player.photo}} />
+              </ng-template>
+              <h6 class="text-purple-400">{{injuriesCard.response[2].player.name}}</h6>
+              <h6 class="truncate-2-lines">{{injuriesCard.response[2].player.reason}}</h6>
+    
+          </p-card>
+  
+          <p-card class="col-6 xl:col-3 " >
+              <ng-template pTemplate="header">
+                  <img class="image-card-news" alt="Card" src={{injuriesCard.response[3].player.photo}} />
+              </ng-template>
+              <h6 class="text-purple-400">{{injuriesCard.response[3].player.name}}</h6>
+              <h6 class="truncate-2-lines">{{injuriesCard.response[3].player.reason}}</h6>
+      
+          </p-card>
+  
+        </div>
+        </p-tabPanel>
+      </p-tabView>
+    </div>
+  </div>
+
+</div>
