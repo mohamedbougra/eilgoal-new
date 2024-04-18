@@ -1,0 +1,50 @@
+<div class="card">
+    <h5>Injuries News</h5>
+    <p-tabView styleClass="tabview-custom">
+      <p-tabPanel>
+        <ng-template pTemplate="header">
+          <i class="text-purple-700 pi pi-align-center"></i>
+          <span class=" ml-1 text-purple-700">Injuries</span>
+        </ng-template>
+        <div class="grid flex justify-content-center">
+            
+          <p-card class="col-6 xl:col-3 " >
+              <ng-template pTemplate="header">
+                  <img class="image-card-news" alt="Card" src={{injuriesCard.response[0].player.photo}} style="size: 50px;"/>
+              </ng-template>
+              <h6 class="text-purple-400">{{injuriesCard.response[0].player.name}}</h6>
+              <h6 class="truncate-2-lines">{{injuriesCard.response[0].player.reason}}</h6>
+    
+          </p-card>
+
+          <p-card class="col-6 xl:col-3 " >
+            <ng-template pTemplate="header">
+                <img class="image-card-news" alt="Card" src={{injuriesCard.response[1].player.photo}}/>
+            </ng-template>
+            <h6 class="text-purple-400">{{injuriesCard.response[1].player.name}}</h6>
+            <h6 class="truncate-2-lines">{{injuriesCard.response[1].player.reason}}</h6>
+    
+        </p-card>
+
+        <p-card class="col-6 xl:col-3 " >
+            <ng-template pTemplate="header">
+                <img class="image-card-news" alt="Card" src={{injuriesCard.response[2].player.photo}} />
+            </ng-template>
+            <h6 class="text-purple-400">{{injuriesCard.response[2].player.name}}</h6>
+            <h6 class="truncate-2-lines">{{injuriesCard.response[2].player.reason}}</h6>
+  
+        </p-card>
+
+        <p-card class="col-6 xl:col-3 " >
+            <ng-template pTemplate="header">
+                <img class="image-card-news" alt="Card" src={{injuriesCard.response[3].player.photo}} />
+            </ng-template>
+            <h6 class="text-purple-400">{{injuriesCard.response[3].player.name}}</h6>
+            <h6 class="truncate-2-lines">{{injuriesCard.response[3].player.reason}}</h6>
+    
+        </p-card>
+
+      </div>
+      </p-tabPanel>
+    </p-tabView>
+  </div>

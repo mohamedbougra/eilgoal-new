@@ -19,9 +19,15 @@ import { AvatarModule } from 'primeng/avatar';
 import { MatchDetailsComponent } from './components/match-details/match-details.component';
 import { ChipModule } from 'primeng/chip';
 import { TagModule } from 'primeng/tag';
-import { ProgressBar, ProgressBarModule } from 'primeng/progressbar';
-import { Divider, DividerModule } from 'primeng/divider';
+import {  ProgressBarModule } from 'primeng/progressbar';
+import {  DividerModule } from 'primeng/divider';
 import { TeamlineupComponent } from './components/teamlineup/teamlineup.component';
+import { GameStatisticsComponent } from './components/game-statistics/game-statistics.component';
+import { InjuriesCardComponent } from './components/injuries-card/injuries-card.component';
+import { TabViewModule } from 'primeng/tabview';
+import { CardModule } from 'primeng/card';
+
+
 
 
 @NgModule({
@@ -34,6 +40,8 @@ import { TeamlineupComponent } from './components/teamlineup/teamlineup.componen
     VerifyEmailComponent,
     MatchDetailsComponent,
     TeamlineupComponent,
+    GameStatisticsComponent,
+    InjuriesCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +66,8 @@ import { TeamlineupComponent } from './components/teamlineup/teamlineup.componen
     TagModule,
     ProgressBarModule,
     DividerModule,
+    TabViewModule,
+    CardModule,
   ],
   providers: [],
   bootstrap: [AppComponent] // Déclarer AppComponent à amorcer

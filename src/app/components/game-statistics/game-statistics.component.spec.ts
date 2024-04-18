@@ -1,0 +1,25 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { GameStatisticsComponent } from './game-statistics.component';
+
+import { MatchDetailsService } from '../../shared/services/match-details.service';
+
+describe('GameStatisticsComponent', () => {
+  let component: GameStatisticsComponent;
+  let fixture: ComponentFixture<GameStatisticsComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [GameStatisticsComponent]
+    })
+    .compileComponents();
+    
+    fixture = TestBed.createComponent(GameStatisticsComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

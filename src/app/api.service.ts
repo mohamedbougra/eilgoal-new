@@ -11,7 +11,7 @@ export class ApiService {
 
   private headers = new HttpHeaders({
     'x-rapidapi-host': 'v3.football.api-sports.io',
-    'x-rapidapi-key': '546446bc637f5e656e8e2742edebb2ed', // clé d'API
+    'x-rapidapi-key': '63bb3a1ba671c3ad5f4e65e2bb52fe79', // clé d'API
   });
 
   constructor(private http: HttpClient) {}

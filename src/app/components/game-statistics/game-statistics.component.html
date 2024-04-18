@@ -1,0 +1,12 @@
+<h5>Statistics</h5>
+<li>{{ statistics.response[0].statistics[0].team.name }}</li>
+<li *ngFor="let statistic of statistics.response[0].statistics[0].statistics">
+  {{ statistic.type }} {{ statistic.value }}
+</li>
+
+<p-divider layout="vertical"></p-divider>
+
+<li>{{ statistics.response[0].statistics[1].team.name }}</li>
+<li *ngFor="let statistic of statistics.response[0].statistics[1].statistics">
+  {{ statistic.type }} {{ statistic.value }}
+</li>

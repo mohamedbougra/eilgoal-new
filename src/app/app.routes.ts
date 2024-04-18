@@ -8,6 +8,8 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 import { AuthGuard, redirectUnauthorizedTo} from '@angular/fire/auth-guard';
 import { MatchDetailsComponent } from './components/match-details/match-details.component';
 import { TeamlineupComponent } from './components/teamlineup/teamlineup.component';
+import { GameStatisticsComponent } from './components/game-statistics/game-statistics.component';
+import { InjuriesCardComponent } from './components/injuries-card/injuries-card.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['sign-in']);
 
@@ -20,6 +22,8 @@ export const routes: Routes = [
   { path: 'verify-email-address', component: VerifyEmailComponent },
   { path: 'match-details', component: MatchDetailsComponent },
   { path: 'teamlineup', component: TeamlineupComponent},
+  { path: 'game-statistics', component: GameStatisticsComponent},
+  { path: 'injuries-card', component: InjuriesCardComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
