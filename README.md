@@ -17,9 +17,11 @@ Veuillez noter que ces liens sont désormais obsolètes. Le projet a été migr�
 
 La branche principale pour ce projet est la branche "finished". Assurez-vous de basculer sur cette branche pour obtenir la version finale et stable de l'application.
 
-## Anciens liens GitHub
+## Anciens liens GitHub ##
 Project Console: https://console.firebase.google.com/project/eilgoal/overview
+
 Hosting URL: https://eilgoal.web.app
+
 Github URL: https://github.com/amineelokri/Eil-Goal.git
 
 ## Auteurs
