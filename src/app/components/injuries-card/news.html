@@ -1,0 +1,23 @@
+<div class="card">
+    <h5>Injuries News</h5>
+    <p-tabView styleClass="tabview-custom">
+        <p-tabPanel>
+            <ng-template pTemplate="header">
+                <i class="text-purple-700 pi pi-align-center"></i>
+                <span class="ml-1 text-purple-700">Injuries</span>
+            </ng-template>
+            <div class="grid flex justify-content-center">
+                <!-- Loop through injuriesCard.response array to generate cards dynamically -->
+                <ng-container *ngFor="let player of injuriesCard.response; let i = index">
+                    <p-card class="col-6 xl:col-3" title="Player Injury">
+                        <ng-template pTemplate="header">
+                            <img class="image-card-news" alt="Player Photo" [src]="player.photo" />
+                        </ng-template>
+                        <h6 class="text-purple-400" title="Player Name">{{ player.name }}</h6>
+                        <h6 class="truncate-2-lines" title="Injury Reason">{{ player.reason }}</h6>
+                    </p-card>
+                </ng-container>
+            </div>
+        </p-tabPanel>
+    </p-tabView>
+</div>
